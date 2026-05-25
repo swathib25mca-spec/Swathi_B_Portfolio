@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.2), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.15), transparent 18%),
+        #05080f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+a {
+    font: inherit;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.55);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.35);
+    border-radius: 9999px;
+}
+
+.glass-card {
+    box-shadow: 0 40px 90px rgba(15, 23, 42, 0.22);
+}
+
+.section-title>p {
+    letter-spacing: 0.28em;
+}
+
+.section-title h2 {
+    text-shadow: 0 8px 40px rgba(15, 23, 42, 0.25);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid rgba(96, 165, 250, 0.75);
+    outline-offset: 3px;
+}
+
+.hero-hobbies {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.hobby-card {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(56, 189, 248, 0.16);
+    border-radius: 24px;
+    padding: 1.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hobby-card strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.hobby-card span {
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hobby-cooking {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(239, 68, 68, 0.12));
+    border-color: rgba(249, 115, 22, 0.4);
+}
+
+.hobby-cooking strong {
+    color: #fed7aa;
+}
+
+.hobby-traveling {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(34, 197, 94, 0.12));
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.hobby-traveling strong {
+    color: #93c5fd;
+}
+
+.hobby-music {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(236, 72, 153, 0.12));
+    border-color: rgba(168, 85, 247, 0.4);
+}
+
+.hobby-music strong {
+    color: #d8b4fe;
+}
+
+.hobby-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(56, 189, 248, 0.2);
+}
